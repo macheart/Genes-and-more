@@ -2,7 +2,9 @@
 title: "HW2"
 author: "Prisma Lopez"
 date: "2/5/2019"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r}
@@ -27,7 +29,8 @@ f[f$`mean diff` <0, ][, "Type"] <- "DOWN"
 f[f$`mean diff` >0, ][, "Type"] <- "UP"
 write.csv(f, file = 'hw2p1q2b.csv')
 
-install.packages("lattice")
+#install.packages("lattice")
+library(lattice)
 ```
 
 ```{r}
